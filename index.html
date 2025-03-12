@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Group Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bloodgroup-predictor">
+        <div class="predictor-header">
+            <h2>Blood Group Predictor</h2>
+            <p>Predict baby's possible blood groups based on family genetics</p>
+        </div>
+
+        <div class="predictor-form">
+            <div class="form-section">
+                <h3>Parents' Blood Groups</h3>
+                <div class="input-group">
+                    <label for="father-blood">Father's Blood Group:</label>
+                    <select id="father-blood" required>
+                        <option value="">Select Blood Group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="mother-blood">Mother's Blood Group:</label>
+                    <select id="mother-blood" required>
+                        <option value="">Select Blood Group</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Grandparents' Blood Groups (Optional)</h3>
+                <div class="grandparents">
+                    <div class="paternal">
+                        <h4>Paternal</h4>
+                        <div class="input-group">
+                            <label for="paternal-gf-blood">Grandfather:</label>
+                            <select id="paternal-gf-blood">
+                                <option value="">Select Blood Group</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="paternal-gm-blood">Grandmother:</label>
+                            <select id="paternal-gm-blood">
+                                <option value="">Select Blood Group</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="maternal">
+                        <h4>Maternal</h4>
+                        <div class="input-group">
+                            <label for="maternal-gf-blood">Grandfather:</label>
+                            <select id="maternal-gf-blood">
+                                <option value="">Select Blood Group</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="maternal-gm-blood">Grandmother:</label>
+                            <select id="maternal-gm-blood">
+                                <option value="">Select Blood Group</option>
+                                <option value="A+">A+</option>
+                                <option value="A-">A-</option>
+                                <option value="B+">B+</option>
+                                <option value="B-">B-</option>
+                                <option value="AB+">AB+</option>
+                                <option value="AB-">AB-</option>
+                                <option value="O+">O+</option>
+                                <option value="O-">O-</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button id="predict-button" type="button">Predict Blood Group</button>
+                <button id="reset-button" type="button">Reset</button>
+            </div>
+        </div>
+
+        <div id="results" class="results-section">
+            <h3>Prediction Results</h3>
+            <div id="results-content" class="results-content">
+                <p>Please enter parents' blood groups and click "Predict" to see possible blood groups for the baby.</p>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>About Blood Group Inheritance</h3>
+            <p>Blood types are determined by multiple alleles. The ABO blood group is controlled by a single gene with three alleles: A, B, and O. The Rh factor (+ or -) is determined by a separate gene.</p>
+            <p>This tool provides a scientific prediction based on genetic inheritance patterns as defined by the World Health Organization standards.</p>
+        </div>
+
+        <div class="footer">
+            <p>Note: This tool provides predictions based on genetic inheritance patterns. For medical decisions, please consult healthcare professionals.</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
